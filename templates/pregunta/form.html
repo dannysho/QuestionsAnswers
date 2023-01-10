@@ -1,0 +1,69 @@
+{% extends 'base/_layout.html' %}
+{% load static %}
+{% block content %}
+
+<div class="app-title">
+  <div>
+    <h1><i class="fa fa-dashboard"></i> Nueva Pregunta</h1>
+  </div>
+  <ul class="app-breadcrumb breadcrumb">
+    <li class="breadcrumb-item"><i class="fa fa-home fa-lg"></i></li>
+    <li class="breadcrumb-item"><a href="/pregunta">Pregunta</a></li>
+  </ul>
+</div>
+      
+<div class="row">
+  <div class="col-md-12">
+    <div class="tile">
+      <div class="tile-body">
+        <form method="POST" action="{{ action }}" enctype="multipart/form-data">
+          {% csrf_token %}
+          <div class="row">
+            <div class="col-sm-12 text-center">
+              {% if msg %}
+              <div class="bs-component">
+                <div class="alert alert-dismissible alert-danger">
+                  <button class="close" type="button" data-dismiss="alert" _msthash="1922700" _msttexthash="19565">×</button>
+                  <font _mstmutation="1" _msthash="1325792" _msttexthash="2433548">
+                    <strong _mstmutation="1" _istranslated="1">¡Oh, Error!</strong>
+                    <i class="alert-link">No se puede guardar</i> {{ msg }}
+                  </font>
+                </div>
+              </div>
+              {% endif %}
+            </div>
+          </div>  
+          
+          <div class="row">
+            <div class="col-lg-6 col-sm-4">
+              <label for="">Título</label>
+              {{form.titulo}}
+              {% for error in form.titulo.errors %}
+                <p class=text-danger>{{ error|escape }}</p>
+              {% endfor %}
+            </div>
+            <div class="col-lg-6 col-sm-4">
+              <label for="">Pregunta</label>
+              {{form.detalle_pregunta}}
+              {% for error in form.detalle_pregunta.errors %}
+                <p class=text-danger>{{ error|escape }}</p>
+              {% endfor %}
+            </div>
+          </div>
+                    
+          <div class="row">
+            <div class="col-md-12 text-right">
+              <br>
+              <button class="btn btn-dark btn-sm" type="submit"><i class="fa fa-save"></i> Guardar</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock content%}
+
+{% block extrajs %}
+
+{% endblock %}
