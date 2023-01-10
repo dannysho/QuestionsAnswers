@@ -29,13 +29,16 @@ class RespuestaForm(forms.ModelForm):
         model = Respuesta
 
         fields = {
+            'correcta',
             'detalle_respuesta',
         }
 
         labels = {
+            'correcta': 'Correcta',
             'detalle_respuesta': 'Detalle Respuesta',
         }
 
         widgets = {
+            'correcta': forms.RadioSelect(),
             'detalle_respuesta': forms.Textarea(attrs={'class':'form-control'}),
         }

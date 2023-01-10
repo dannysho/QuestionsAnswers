@@ -1,0 +1,12 @@
+{% extends 'base/_layout.html' %}
+
+{% block content %}
+<h1>Eliminar Respuesta</h1>
+<form method="post">
+    {% csrf_token %}
+    <h3>¿Desea Eliminar la respuesta: "{{respuesta.detalle_respuesta}} "?</h3>
+    <button class="btn btn-danger" type="submit">Si, eliminar</button>  
+    <a class="btn btn-default" href="{% url 'list' %}">Cancelar</a>
+</form>
+
+{% endblock %}

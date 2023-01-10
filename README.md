@@ -1,6 +1,6 @@
 # QuestionsAnswers
 
-1- Crear bd en Postgresql con nombre 'questionsanswers'
+1- Crear bd en PgAdmin con nombre 'questionsanswers'
 2- Verificar si tiene diferente usuario y contraseña en la ruta 'QuestionsAnswers/settings.py', si es el caso editarlo
 2- Ejecutar python manage.py makemigrations
 3- Ejecutar python manage.py migrate
