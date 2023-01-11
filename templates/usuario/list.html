@@ -32,7 +32,6 @@
                         <thead>
                             <tr>
                                 <th>Usuario</th>
-                                <th>Preguntas</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -40,10 +39,6 @@
                             {% for u in page_obj %}
                             <tr>
                                 <td>{{ u.nombres }}, {{ u.apellido_paterno }} {{ u.apellido_materno }}</td>
-                                <td>
-                                    <a href="/pregunta/list_preguntas/{{ p.id }}"><i class="fa fa-eye"></i></a>
-                                    <a href="/pregunta/nueva_pregunta/{{ p.id }}"><i class="fa fa-plus"></i></a>
-                                </td>
                             </tr>
                             {% endfor %}
                         

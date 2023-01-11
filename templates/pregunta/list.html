@@ -30,7 +30,9 @@
                                 <th>Título</th>
                                 <th>Pregunta</th>
                                 <th>Fecha</th>
+                                {% if user.groups.all.0.name == "Admin" %}
                                 <th>Acciones</th>
+                                {% endif %}
                                 <th>Respuestas</th>
                             </tr>
                         </thead>
@@ -41,10 +43,12 @@
                                 <td>{{ p.titulo }}</td>
                                 <td>{{ p.detalle_pregunta }}</td>
                                 <td>{{ p.fecha }}</td>
+                                {% if user.groups.all.0.name == "Admin" %}
                                 <td>
                                     <a href="/pregunta/editar/{{ p.id }}"><i class="fa fa-pencil-alt"></i></a>
                                     <a href="/pregunta/eliminar/{{ p.id }}"><i class="fa fa-trash"></i></a>
                                 </td>
+                                {% endif %}
                                 <td>
                                     <a href="/pregunta/list_respuesta/{{ p.id }}"><i class="fa fa-eye"></i></a>
                                     <a href="/pregunta/nueva_respuesta/{{ p.id }}"><i class="fa fa-plus"></i></a>

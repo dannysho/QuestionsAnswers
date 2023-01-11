@@ -28,8 +28,12 @@
                         <thead>
                             <tr>
                                 <th>Respuesta</th>
-                                <th>Correcta</th>
-                                <th>Acciones</th>
+                                <th>Correcta ó incorrecta</th>
+                                <th>Fecha</th>
+                                {% if user.groups.all.0.name == "Admin" %}
+                                <th>Eliminar</th>
+                                <th>Marcar Correcta</th>
+                                {% endif %}
                             </tr>
                         </thead>
                         <tbody>
@@ -37,11 +41,16 @@
                             {% for r in page_obj %}
                             <tr>
                                 <td>{{ r.detalle_respuesta }}</td>
-                                <td>{{ r.correcta }}</td>
+                                <td>{% if r.correcta %}Correcta{% else %}Incorrecta{% endif %}</td>
                                 <td>{{ r.fecha }}</td>
+                                {% if user.groups.all.0.name == "Admin" %}
                                 <td>
                                     <a href="/pregunta/eliminar_respuesta/{{ r.id }}"><i class="fa fa-trash"></i></a>
                                 </td>
+                                <td>
+                                    <a type="button" id="id_correcta" data-value="{{ r.id }}" href="#"><i class="fa fa-check"></i></a>
+                                </td>
+                                {% endif %}
                             </tr>
                             {% endfor %}
                         
@@ -83,4 +92,5 @@
 
 
 {% block extrajs %}
+<script type="text/javascript" src="{% static 'js/respuesta/respuesta.js' %}"></script>
 {% endblock %}

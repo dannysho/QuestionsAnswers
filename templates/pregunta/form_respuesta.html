@@ -40,29 +40,6 @@
                             <p class=text-danger>{{ error|escape }}</p>
                           {% endfor %}
                         </div>
-                        <div class="col-lg-4 col-sm-4">
-                            <label for="">Correcta</label><br>
-                            <div class="radio-button">
-                                {% if form.correcta.value %}
-                                <label>
-                                    <input type="radio" name="correcta" checked="true"  value="True"><span class="label-text">Si</span>
-                                </label>
-                                 <label>
-                                    <input type="radio" name="correcta" value="False"><span class="label-text">No</span>
-                                </label>
-                                {% else %}
-                                 <label>
-                                    <input type="radio" name="correcta" value="True"><span class="label-text">Si</span>
-                                </label>
-                                <label>
-                                    <input type="radio" name="correcta" checked="false"  value="False"><span class="label-text">No</span>
-                                </label>
-                                {% endif %}
-                            </div>
-                                {% for error in form.correcta.errors %}
-                                    <p class=text-danger>{{ error|escape }}</p>
-                                {% endfor %}
-                        </div>
                       </div>
                     <div class="row">
                         <div class="col-md-12 text-right">

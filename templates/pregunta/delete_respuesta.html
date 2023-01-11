@@ -4,6 +4,21 @@
 <h1>Eliminar Respuesta</h1>
 <form method="post">
     {% csrf_token %}
+    <div class="row">
+        <div class="col-sm-12 text-center">
+          {% if msg %}
+          <div class="bs-component">
+            <div class="alert alert-dismissible alert-danger">
+              <button class="close" type="button" data-dismiss="alert" _msthash="1922700" _msttexthash="19565">×</button>
+              <font _mstmutation="1" _msthash="1325792" _msttexthash="2433548">
+                <strong _mstmutation="1" _istranslated="1">¡Oh, Error!</strong>
+                <i class="alert-link">No se puede eliminar</i> {{ msg }}
+              </font>
+            </div>
+          </div>
+          {% endif %}
+        </div>
+    </div>
     <h3>¿Desea Eliminar la respuesta: "{{respuesta.detalle_respuesta}} "?</h3>
     <button class="btn btn-danger" type="submit">Si, eliminar</button>  
     <a class="btn btn-default" href="{% url 'list' %}">Cancelar</a>
