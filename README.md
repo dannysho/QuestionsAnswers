@@ -10,3 +10,4 @@
 
 requerimientos
 psycopg2==2.9.3
+Django==3.1.4
