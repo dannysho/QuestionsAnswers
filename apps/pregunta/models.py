@@ -4,7 +4,8 @@ from django.db import models
 class Pregunta(models.Model):
     titulo = models.TextField(max_length=200)
     detalle_pregunta = models.TextField(max_length=200)
-    fecha = models.DateTimeField()    
+    fecha = models.DateTimeField()
+        
 
     def save(self, *args, **kwargs):
         self.titulo = (self.titulo).upper()

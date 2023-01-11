@@ -8,8 +8,8 @@ class Usuario(models.Model):
     apellido_materno = models.TextField(max_length=50)
     dni = models.TextField(max_length=8)    
 
-def save(self, *args, **kwargs):
-    self.nombres = (self.nombres).upper()
-    self.apellido_paterno = (self.apellido_paterno).upper()
-    self.apellido_materno = (self.apellido_materno).upper()
-    return super(Usuario, self).save(*args, **kwargs)
+    def save(self, *args, **kwargs):
+        self.nombres = (self.nombres).upper()
+        self.apellido_paterno = (self.apellido_paterno).upper()
+        self.apellido_materno = (self.apellido_materno).upper()
+        return super(Usuario, self).save(*args, **kwargs)

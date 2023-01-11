@@ -1,0 +1,140 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.navbar {
+    background: #272727;
+}
+
+body {
+    background-image: url(../../css/assets/img/tizas.jpg);
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+
+footer {
+    width: 100%;
+    font-family: Raleway;
+}
+
+.footer-container {
+    width: 100%;
+    background-image: url(../img/fondo3.jpg);
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    color: black;
+}
+
+.footer-main {
+    width: 98%;
+    max-width: 1000px;
+    margin: auto;
+    padding: 50px 0;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.footer-main .footer-columna {
+    width: calc(100%/3);
+    text-align: justify;
+    padding: 1%;  
+}
+
+
+.about-columna {
+    width: 100%;
+    text-align: justify;
+    padding: 1%;
+}
+
+.about-columna h3 {
+    color: yellow;
+    text-align: center;
+}
+
+
+.about-columna p {
+    text-align: justify;
+}
+
+
+
+.footer-main .footer-columna h3 {
+    font-size: 20px;
+    color: black;
+    margin-bottom: 20px;
+}
+
+.footer-main .footer-columna span p {
+    display: inline-block;
+    margin-left: 5px;
+    margin-bottom: 15px;
+    font-family: Raleway;
+}
+
+.footer-copy-redes {
+    width: 100%;
+    background: #000;
+    border-top: 3px solid #fff;
+}
+
+.main-copy-redes {
+    width: 98%;
+    max-width: 1000px;
+    padding: 15px, 0;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    -ms-align-items: center;
+    align-items: center;
+}
+
+
+.main-copy-redes .footer-copy {
+    width: 30%;
+    color: #fff;
+}
+
+.main-copy-redes  .footer-redes {
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.main-copy-redes  .footer-redes a {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    background: #fff;
+    color: #000;
+    text-align: center;
+}
+
+table
+{
+    border-collapse: collapse;
+}
+
+td, th 
+{
+    border: 1px solid black;
+}
+
+th {
+    color: yellow;
+    background-color:  black;  
+}
+
+.input-group > .form-control:not(:first-child),
+.input-group > .custom-select:not(:first-child) {
+  border-radius: 0;
+}
+
+

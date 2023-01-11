@@ -37,6 +37,9 @@
             <!--<p>Hola {{ user.groups.all.0 }}</p>
             <li><a class="dropdown-item" href="page-user.html"><i class="fa fa-user fa-lg"></i> Profile</a></li>
             -->
+            <li><a class="dropdown-item" href="{% url 'logout' %}"><i class="fa fa-sign-out fa-lg"></i> SALIR</a></li>
+            {% else %}
+            <li><a class="dropdown-item" href="{% url 'login' %}"><i class="fa fa-cog fa-lg"></i> INICIAR SESION </a></li>
             
             {% endif %}
             

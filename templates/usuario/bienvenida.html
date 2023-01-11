@@ -1,0 +1,27 @@
+{% extends 'base/_layout.html' %}
+{% load static %}
+
+{% block extrahead %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bienvenida/bienvenida.css'%}">
+{% endblock %}
+
+{% block content %}
+
+   
+        <div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+          <center><h1 style="color: black"><i class="fa fa-dashboard"></i> Bienvenid@ </h1></center>
+          <center><h2 style="color: black">{{usuario.first_name}}</h2></center>
+        </div>
+   
+
+{% endblock %}
+
+
+{% block extrajs %}
+{% endblock %}
